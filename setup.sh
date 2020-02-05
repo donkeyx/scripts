@@ -5,7 +5,7 @@ homedir=~
 eval homedir=$homedir
 
 #pull clean
-cd scripts && git pull --rebase --prune $@ && git submodule update --init --recursive && cd ..;
+cd scripts && git pull --rebase --prune $@ && cd ..;
 #pull clean
 
 # create home bin dir
@@ -152,15 +152,15 @@ else
 fi
 
 ## ## copy themes over and clone
-if [ -d $zsh_custom/themes/powerlevel9k ]; then
-  echo '[ok] powerlevel9k exists'
-  (cd $zsh_custom/themes/powerlevel9k; git pull-all;)
-else
-  mkdir -p $zsh_custom/themes/powerlevel9k;
-  echo "[bad] creating folder!"
-  git clone git@github.com:bhilburn/powerlevel9k.git "$zsh_custom/themes/powerlevel9k";
-  (cd $zsh_custom/themes/powerlevel9k; git pull-all;)
-fi
+#if [ -d $zsh_custom/themes/powerlevel9k ]; then
+#  echo '[ok] powerlevel9k exists'
+#  (cd $zsh_custom/themes/powerlevel9k; git pull-all;)
+#else
+#  mkdir -p $zsh_custom/themes/powerlevel9k;
+#  echo "[bad] creating folder!"
+#  git clone git@github.com:bhilburn/powerlevel9k.git "$zsh_custom/themes/powerlevel9k";
+#  (cd $zsh_custom/themes/powerlevel9k; git pull-all;)
+#fi
 
 find ~/scripts/oh-my-zsh/themes/ -type f | while read line; do
 

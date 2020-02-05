@@ -9,8 +9,9 @@ export ZSH=~/.oh-my-zsh
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 #ZSH_THEME="dogenpunk"
 #ZSH_THEME="xxf"
-ZSH_THEME="powerlevel9k/powerlevel9k"
-#ZSH_THEME="edvardm"
+#ZSH_THEME="powerlevel9k/powerlevel9k"
+ZSH_THEME="edvardm"
+#ZSH_THEME="honukai"
 
 ## POWERLEVEL9K SETTINGS ##
 POWERLEVEL9K_STATUS_VERBOSE=false
@@ -173,6 +174,9 @@ ack-ssm-env() {
     echo $params | ack $2
   fi
 }
+
+# source in any private functions etc
+source private/*.sh
 
 # google cloud stuff
 
