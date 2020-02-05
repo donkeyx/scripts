@@ -145,9 +145,13 @@ export HEAP="-Xms1g -Xmx1g -XX:MaxMetaspaceSize=256m"
 
 # kubes stuff
 export KUBECONFIG=~/.kube/config:~/.kube/adl-rancher-01
-alias ku="kubectl"
-alias kup="kubectl get pods -o wide"
-alias kua="kubectl get all --all-namespaces"
+alias k="kubectl"
+alias kall="kubectl get all"
+alias kp="kubectl get pods -o wide"
+alias kpsw="kubectl get pods,svc -o wide -w"
+alias kpa="kubectl get pods -o wide --all-namespaces"
+alias kpsa="kubectl get pods,services,ing -o wide --all-namespaces"
+alias kaf="kubectl apply -f"
 
 ##python stuff
 #alias python='python3'
